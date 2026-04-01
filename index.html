@@ -94,6 +94,7 @@ function render(data) {
 
 // 🔥 realtime listener (YOUR PATH)
 firebase.database().ref("unlinked_uids").on("value", (snap) => {
+  console.log("DATA:", snap.val());
   render(snap.val());
 });
 </script>
