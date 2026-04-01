@@ -93,7 +93,7 @@ function render(data) {
 }
 
 // 🔥 realtime listener (YOUR PATH)
-firebase.database().ref("db/unlinked_uids").on("value", (snap) => {
+firebase.database().ref("unlinked_uids").on("value", (snap) => {
   render(snap.val());
 });
 </script>
